@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+/* mise en forme de la premiere partie */
+
+.first-part {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.first-part-left,
+.first-part-right {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.left-container,
+.right-container {
+  width: 95%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.left-container h2 {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 20px 35px;
+}
+.left-container p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 0 20px 35px;
+}
+
+button {
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.right-container img {
+  height: 705px;
+  width: 100%;
+}
+
+/* mise en forme de la seconde partie */
+
+.second-part::before {
+  content: "";
+  position: absolute;
+  background: rgba(10, 10, 10, 0.79);
+  height: 1px;
+  width: 80%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.second-part {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.second-part-left,
+.second-part-right {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.second-part-left .left-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.second-part-left .left-container img {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+}
+
+.second-part-right .right-container h2 {
+  text-transform: initial;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 20px 35px;
+}
+
+.second-part-right .right-container p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 0 20px 35px;
+}
+
+/* mise en forme troisieme partie */
+
+.third-part {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-part-left,
+.third-part-right {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.third-part .left-container,
+.right-container {
+  width: 95%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.third-part .left-container h2 {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 20px 35px;
+}
+
+.third-part .left-container p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 0 20px 35px;
+}
+
+.third-part-right .right-container img {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+}
+
+/* mise en forme formulaire */
+
+.formulaire-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.formulaire-container p {
+  text-align: center;
+  text-transform: initial;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 45px 0 0 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 110px 220px 110px;
+  grid-template-areas:
+    "a b"
+    "c c"
+    "d d";
+
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  gap: 10px;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(35, 34, 34, 0.689);
+  border-radius: 5px;
+}
+
+.d1 {
+  grid-area: a;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.d2 {
+  grid-area: b;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+.ligne2 {
+  grid-area: c;
+  width: 100%;
+}
+
+.ligne2 p {
+  margin: 0 auto 10px;
+}
+
+.ligne2 textarea {
+  width: 100%;
+  margin: 0 auto;
+}
+
+form button {
+  grid-area: d;
+  width: 25%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  background: gray;
+  height: 1px;
+  width: 80%;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer {
+  margin: 35px 0 10px;
+  position: relative;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.icon {
+  border: 1px solid rgb(81, 80, 80);
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+}
+
+a {
+  text-align: center;
+  color: black;
+  position: absolute;
+  margin: 0 auto;
+  display: block;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
